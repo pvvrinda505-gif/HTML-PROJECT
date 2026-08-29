@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartStudyPlanner - Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">📚SmartStudyPlanner</div>
+      <ul class="nav-links">
+        
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="planner.html" class="active">Planner</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+       
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Planner Section -->
+  <section class="planner">
+    <h1>⏱️STUDY PLANNER⏱️</h1>
+    <p class="subtitle">Plan intentional sessions and keep your workload realistic.</p>
+
+    <!-- Stats Cards -->
+    <div class="stats">
+      <div class="stat-card">
+        <h3>TOTAL SESSIONS</h3>
+        <p id="total-sessions">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>COMPLETED</h3>
+        <p id="completed-sessions">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>ACTIVE</h3>
+        <p id="active-sessions">0</p>
+      </div>
+    </div>
+
+    <!-- Create New Session Form -->
+    <div class="session-form">
+      <h2>+ Create New Session</h2>
+      <form id="planner-form">
+        <input type="text" id="subject" placeholder="Subject" required>
+        <input type="text" id="topic" placeholder="e.g., Topics" required>
+        <input type="text" id="duration" placeholder="e.g. Hours:mins" required>
+        <button type="submit" class="btn">Add Study Session</button>
+      </form>
+    </div>
+
+    <!-- Study Sessions List -->
+     <div class="sessions-box">
+    <h2>Study Sessions✨</h2>
+    <div id="session-list">
+      <!-- ✅ Session cards will be injected here by planner.js -->
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 SmartStudyPlanner | Built by Vrinda</p>
+  </footer>
+
+  <script src="planner.js"></script>
+  <script src="nav-protect.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>SmartStudyPlanner - Profile</title>
+<link rel="stylesheet" href="style.css" />
+
+</head>
+<body class="dashboard-page">
+
+<header>
+  <nav class="navbar">
+    <div class="logo">📚SmartStudyPlanner</div>
+    <ul class="nav-links">
+      
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="planner.html">Planner</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      
+    </ul>
+  </nav>
+</header>
+
+<div class="page-wrap">
+
+  <div class="header-title">
+    <h1>👤 My Profile</h1>
+    <p>Manage your account and preferences</p>
+  </div>
+
+  <!-- Identity card -->
+  <div class="profile-card identity-card">
+  <div class="avatar-wrap">
+    <div class="avatar-circle" id="avatar-initial">?</div>
+    <label for="avatar-input" class="avatar-camera-btn" title="Change photo">📷</label>
+    <input type="file" id="avatar-input" accept="image/*" style="display:none;" />
+  </div>
+
+    <div class="identity-info">
+      <h2 id="display-name">—</h2>
+      <p>📧 <span id="display-email">—</span></p>
+      <p>📅 <span id="display-created">—</span></p>
+      <button class="edit-btn" id="toggle-edit-btn">✏️ Edit Profile</button>
+
+      <div id="edit-form">
+        <label for="profile-name">Full Name</label>
+        <input type="text" id="profile-name" />
+
+        <label for="profile-email">Email</label>
+        <input type="email" id="profile-email" />
+
+        <p id="profile-status"></p>
+        <button type="submit" id="save-profile-btn">Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <!-- Account Information -->
+    <div class="profile-card">
+      <h3>👤 Account Information</h3>
+      <div class="info-row"><span>Full Name</span><span id="info-name">—</span></div>
+      <div class="info-row"><span>Email Address</span><span id="info-email">—</span></div>
+      <div class="info-row"><span>Member Since</span><span id="info-created">—</span></div>
+      <div class="info-row"><span>Account Status</span><span class="status-pill">Active</span></div>
+    </div>
+
+    <!-- My Subjects -->
+    <div class="profile-card">
+      <h3>📖 My Subjects</h3>
+      <div id="subject-list"></div>
+      <button class="add-subject-btn" id="add-subject-btn">+ Add New Subject</button>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <!-- Study Preferences -->
+    <div class="profile-card">
+      <h3>⚙️ Study Preferences</h3>
+      <div class="pref-grid">
+        <div class="pref-box pref-green">
+          <div class="pref-label">⏱️ Pomodoro Duration</div>
+          <input type="number" id="pref-pomodoro" min="1" max="180" />
+          <span class="unit">min</span>
+        </div>
+        <div class="pref-box pref-yellow">
+          <div class="pref-label">☕ Short Break</div>
+          <input type="number" id="pref-short" min="1" max="60" />
+          <span class="unit">min</span>
+        </div>
+        <div class="pref-box pref-blue">
+          <div class="pref-label">☕ Long Break</div>
+          <input type="number" id="pref-long" min="1" max="90" />
+          <span class="unit">min</span>
+        </div>
+      </div>
+      <button class="edit-btn" id="save-prefs-btn" style="margin-top:16px;">💾 Save Preferences</button>
+      <p id="pref-status"></p>
+    </div>
+
+    <!-- Account Actions -->
+    <div class="profile-card">
+      <h3>🔒 Account Actions</h3>
+      <button class="action-row" id="change-password-btn">🔑 Change Password &nbsp; ›</button>
+
+      <div id="password-form" style="display:none;">
+        <label for="current-password">Current Password</label>
+        <input type="password" id="current-password" />
+        <label for="new-password">New Password</label>
+        <input type="password" id="new-password" />
+        <label for="confirm-password">Confirm New Password</label>
+        <input type="password" id="confirm-password" />
+        <button type="button" id="save-password-btn" style="margin-top:12px;" class="edit-btn">Update Password</button>
+        <p id="password-status"></p>
+      </div>
+
+      <button class="action-row danger" id="logout-btn">🚪 Logout &nbsp; ›</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="profile.js"></script>
+<script src="nav-protect.js"></script>
+</body>
+</html>

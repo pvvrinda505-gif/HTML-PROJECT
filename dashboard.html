@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartStudyPlanner - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dashboard-page">
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">📚SmartStudyPlanner</div>
+      <ul class="nav-links">
+        
+         <li><a href="profile.html">Profile</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="calendar.html">Calendar</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+ <div class="page-topbar-gap"></div>
+  <!-- Dashboard Section -->
+  <section class="dashboard">
+    <div class="dashboard-grid">
+
+<!-- Subject Selection -->
+<div class="dashboard-card">
+  <h2>Select Subject</h2>
+  <div class="subject-options" id="subject-options"></div>
+</div>
+
+
+<!-- Progress Tracker -->
+<div class="dashboard-card">
+  <h2>Progress</h2>
+  <p id="progress">Completed: 0 / 120 minutes</p>
+</div>
+
+
+  <!-- Pomodoro Timer Card -->
+   <div class="dashboard-card">
+  <h2>Pomodoro Timer</h2>
+  <p class="timer-subtitle" id="timer-label">Focus mode is on</p>
+
+  <div class="timer-circle-wrap">
+    <svg class="timer-svg" width="220" height="220" viewBox="0 0 220 220">
+      <circle class="timer-track" cx="110" cy="110" r="100"></circle>
+      <circle class="timer-progress" id="timer-progress-circle" cx="110" cy="110" r="100"></circle>
+    </svg>
+    <div class="timer-text" id="timer">25:00</div>
+  </div>
+
+  <div class="pomodoro-actions">
+    <button id="start-btn">Start</button>
+    <button id="pause-btn">Pause</button>
+    <button id="reset-btn">Reset</button>
+    <button id="break-btn">Break</button>
+
+  </div>
+  <p>Sessions Completed: <span id="pomodoro-completed">0</span></p>
+</div>
+
+    <!-- Study Statistics Card -->
+    <div class="dashboard-card">
+      <h2>Study Statistics</h2>
+      <div class="stats-grid">
+        <div class="stat-box">Total Sessions: <span id="stat-total">0</span></div>
+        <div class="stat-box">Completed: <span id="stat-completed">0</span></div>
+        <div class="stat-box">Pending: <span id="stat-pending">0</span></div>
+        <div class="stat-box">Completion Rate: <span id="stat-rate">0%</span></div>
+        <div class="stat-box">Total Hours:Mins : <span id="stat-minutes">0</span></div>
+      </div>
+    </div>
+  
+</div><!-- end dashboard-grid -->
+
+
+ <!-- Chart Boxes -->
+  <div class="chart-section">
+  <div class="chart-box">
+    <h3>Session Status</h3>
+    <canvas id="statusChart"></canvas>
+  </div>
+
+  <div class="chart-box">
+    <h3>Sessions by Subject</h3>
+    <canvas id="subjectChart"></canvas>
+  </div>
+</div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 SmartStudyPlanner | Built by Vrinda</p>
+  </footer>
+
+
+<!-- Scripts (only once!) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="dashboard.js"></script>
+  <script src="nav-protect.js"></script>
+
+</body>
+</html>

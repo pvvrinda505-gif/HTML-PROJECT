@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚Smart Study Planner - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">📚Smart Study Planner</div>
+      <ul class="nav-links" id="nav-logged-out">
+  <li><a href="index.html" class="active">Home</a></li>
+  <li><a href="login.html">Login</a></li>
+  <li><a href="register.html">Register</a></li>
+  <li><a href="about.html">About</a></li>
+</ul>
+
+<ul class="nav-links" id="nav-logged-in" style="display:none;">
+  <li><a href="index.html" class="active">Home</a></li>
+  <li><a href="login.html">Login</a></li>
+  <li><a href="register.html">Register</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="#" onclick="logout()">Logout</a></li>
+</ul> 
+
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-banner">
+  <div class="hero-box">
+    <h1>Welcome to Smart Study Planner</h1>
+    <p>Your Smart Study Planner & Pomodoro Timer<br>
+       Master your studies with intelligent planning, time management, and detailed analytics.<br>
+       Study smarter, not harder!</p>
+    <a href="login.html" class="btn">Start Planning Now</a>
+  </div>
+</section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2>✨ Features</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <div class="icon">⏱️</div>
+        <h3>Pomodoro Timer</h3>
+        <p>25-minute focused study sessions to boost productivity.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📅</div>
+        <h3>Study Planning</h3>
+        <p>Organize your subjects and track study sessions.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📊</div>
+        <h3>Analytics Dashboard</h3>
+        <p>Visualize your progress and study patterns.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💾</div>
+        <h3>Local Storage</h3>
+        <p>All your data is saved locally on your device.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+<section class="cta">
+  <div class="cta-box">
+    <h2>Ready to improve your studying?</h2>
+    <p>Create a study plan and start tracking your progress today!</p>
+    <a href="login.html" class="btn">Open Planner</a>
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Smart Study Planner | Built by Vrinda</p>
+  </footer>
+  <script src="nav-protect.js"></script>
+
+</body>
+</html>

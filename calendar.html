@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartStudyPlanner - Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="calendar-page-bg">
+  <header>
+    <nav class="navbar">
+      <div class="logo">📚SmartStudyPlanner</div>
+      <ul class="nav-links">
+        
+         <li><a href="profile.html">Profile</a></li>
+        <li><a href="planner.html">Planner</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="calendar.html" class="active">Calendar</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section class="calendar-page">
+    <h1>🗓️STUDY CALENDER🗓️</h1>
+    
+
+    <div class="calendar-layout">
+
+      <!-- LEFT: Weekly Update -->
+      <aside class="weekly-update" id="weekly-update">
+        <h2>Weekly Update</h2>
+        <div id="weekly-update-list"></div>
+      </aside>
+
+      <!-- CENTER: Calendar Grid -->
+      <main class="calendar-main">
+        <div class="calendar-header">
+          <button id="prev-month" class="cal-nav-btn">&#8592;</button>
+          <h2 id="month-year"></h2>
+          <button id="next-month" class="cal-nav-btn">&#8594;</button>
+        </div>
+
+        <div class="calendar-weekdays">
+          <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+          <div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
+
+        <div class="calendar-grid" id="calendar-grid"></div>
+      </main>
+
+      <!-- RIGHT: Task Section -->
+      <aside class="task-section" id="task-section">
+        <h2>Subjects</h2>
+        <ul id="task-list"></ul>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Day Detail Modal -->
+  <div class="day-modal-overlay" id="day-modal-overlay">
+    <div class="day-modal">
+      <div class="day-modal-header">
+        <h3 id="day-modal-title"></h3>
+        <button id="day-modal-close">&times;</button>
+      </div>
+      <div class="day-modal-body" id="day-modal-body"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 SmartStudyPlanner | Built by Vrinda</p>
+  </footer>
+
+  <script src="calendar.js"></script>
+  <script src="nav-protect.js"></script>
+</body>
+</html>
