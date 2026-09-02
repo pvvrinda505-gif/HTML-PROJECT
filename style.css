@@ -1620,6 +1620,7 @@ body {
   }
 
   .nav-links {
+     flex-direction: column;   /* stack vertically */
     flex-wrap: wrap;
     width: 100%;
     gap: 0.5rem 1rem;
