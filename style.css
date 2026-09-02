@@ -42,6 +42,17 @@ header {
   gap: 1rem;
   margin: 0;
   padding: 0;
+   flex-wrap: wrap;   /* allow wrapping on small screens */
+}
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;  /* stack links vertically */
+    align-items: flex-start;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .nav-links a {
