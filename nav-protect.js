@@ -7,7 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".nav-links a").forEach(link => {
     const href = link.getAttribute("href");
 
-    
+    if (href === "login.html" && window.location.pathname !== "/login.html") {
+  if (isLoggedIn) {
+    link.textContent = "Profile";
+    link.setAttribute("href", "profile.html");
+  }
+}
+
 
     // Protect Planner and Dashboard
     if (href === "planner.html" || href === "dashboard.html") {
