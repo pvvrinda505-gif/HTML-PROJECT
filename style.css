@@ -1602,10 +1602,7 @@ body {
   width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px;
 }
 
-
 /* ================= Mobile Navbar Fix ================= */
-/* Applies to every page automatically since .navbar/.nav-links
-   are shared classes in this one shared stylesheet. */
 @media (max-width: 700px) {
   .navbar {
     flex-direction: column;
@@ -1620,7 +1617,6 @@ body {
   }
 
   .nav-links {
-     flex-direction: column;   /* stack vertically */
     flex-wrap: wrap;
     width: 100%;
     gap: 0.5rem 1rem;
@@ -1638,3 +1634,4 @@ body {
     padding: 0.25rem 0;        /* extra spacing for touch */
   }
 }
+
