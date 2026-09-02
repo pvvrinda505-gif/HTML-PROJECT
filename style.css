@@ -1831,149 +1831,38 @@ body {
 
   /* ================= CALENDAR ================= */
 
- .calendar-page {
+  .calendar-page {
     width: 100%;
     max-width: 100%;
-    padding: 1.2rem 8px;
-    margin: 0;
-    overflow: hidden;
+    padding: 1rem 10px;
   }
 
   .calendar-page h1 {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
   }
 
   .calendar-page .subtitle {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
-
-  /* Put Weekly Update, Calendar and Subjects vertically */
-  .calendar-layout {
-    display: flex;
-    flex-direction: column;
+  .calendar-box {
     width: 100%;
     max-width: 100%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+
+  .calendar-layout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
   }
 
-
-  /* Weekly Update */
   .weekly-update {
     width: 100%;
-    max-width: 100%;
     max-height: none;
   }
-
-
-  /* Main Calendar */
-  .calendar-main {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-
-
-  /* Month navigation */
-  .calendar-header {
-    width: 100%;
-    gap: 8px;
-    margin-bottom: 10px;
-  }
-
-  .calendar-header h2 {
-    min-width: 0;
-    flex: 1;
-    font-size: 1.1rem;
-  }
-
-  .cal-nav-btn {
-    width: 34px;
-    height: 34px;
-    flex-shrink: 0;
-  }
-
-
-  /* Weekday names */
-  .calendar-weekdays {
-    width: 100%;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 3px;
-    margin-bottom: 4px;
-    font-size: 0.65rem;
-  }
-
-
-  /* Calendar grid */
-  .calendar-grid {
-    width: 100%;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    grid-template-rows: repeat(6, auto);
-    gap: 3px;
-  }
-
-
-  /* Calendar days */
-  .cal-day {
-    width: 100%;
-    height: 55px;
-    min-width: 0;
-    padding: 4px;
-    border-radius: 6px;
-    font-size: 0.65rem;
-    overflow: hidden;
-  }
-
-  .cal-day-number {
-    font-size: 0.7rem;
-  }
-
-
-  /* Prevent hover enlargement on phone */
-  .cal-day:hover {
-    transform: none;
-  }
-
-
-  /* Subjects */
-  .task-section {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-
-/* Extra-small phones */
-@media (max-width: 400px) {
-
-  .calendar-page {
-    padding: 1rem 5px;
-  }
-
-  .calendar-page h1 {
-    font-size: 1.4rem;
-  }
-
-  .calendar-weekdays {
-    font-size: 0.58rem;
-    gap: 2px;
-  }
-
-  .calendar-grid {
-    gap: 2px;
-  }
-
-  .cal-day {
-    height: 48px;
-    padding: 3px;
-    font-size: 0.55rem;
-  }
-
-  .cal-day-number {
-    font-size: 0.65rem;
-  }
-}
 
 
   /* ================= PROFILE ================= */
@@ -2038,6 +1927,33 @@ body {
     transform: none;
   }
 }
+
+/* ================= MOBILE CALENDAR FIX ================= */
+
+@media (max-width: 700px) {
+
+  .calendar-weekdays {
+    grid-template-columns: repeat(7, 1fr);
+    width: 100%;
+    gap: 3px;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, auto);
+    width: 100%;
+    gap: 3px;
+  }
+
+  .cal-day {
+    width: 100%;
+    height: 55px;
+    padding: 4px;
+    font-size: 0.65rem;
+  }
+
+}
+
 
 
 /* ================= VERY SMALL PHONES ================= */
