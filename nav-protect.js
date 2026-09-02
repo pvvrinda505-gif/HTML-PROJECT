@@ -7,14 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".nav-links a").forEach(link => {
     const href = link.getAttribute("href");
 
-    // Swap "Login" -> "Profile" once someone's actually logged in
-    if (href === "login.html") {
-      if (isLoggedIn) {
-        link.textContent = "Profile";
-        link.setAttribute("href", "profile.html");
-      }
-      return; // this link doesn't need the protect-on-click logic below
-    }
+    
 
     // Protect Planner and Dashboard
     if (href === "planner.html" || href === "dashboard.html") {
