@@ -1619,7 +1619,7 @@ body {
   .nav-links {
     flex-wrap: wrap;
     width: 100%;
-    gap: 0.5rem 1rem;
+     gap: 0; 
     justify-content: flex-start;
   }
 
