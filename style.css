@@ -45,12 +45,6 @@ header {
 
 }
 
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
 .nav-links a {
   color: #fff;
   text-decoration: none;
