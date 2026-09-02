@@ -802,7 +802,7 @@ body {
   }
 
   .pomodoro, .statistics {
-    width: 90%;   /* full width on small screens */
+    width: 100%;   /* full width on small screens */
   }
 }
 
