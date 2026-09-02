@@ -1601,37 +1601,41 @@ body {
 #password-form input {
   width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px;
 }
-
-/* ================= Mobile Navbar Fix ================= */
+/* ================= Mobile Navbar ================= */
 @media (max-width: 700px) {
+
   .navbar {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0.75rem 1rem;
-    width: 100%;              /* ensure full width on mobile */
+    padding: 12px 16px;
+    width: 100%;
   }
 
   .navbar .logo {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 10px;
   }
 
   .nav-links {
+    display: flex;
     flex-wrap: wrap;
     width: 100%;
-     gap: 0; 
+    gap: 8px 18px;
     justify-content: flex-start;
+    margin: 0;
+    padding: 0;
   }
 
   .nav-links li {
-    list-style: none;          /* remove bullets if any appear */
-    flex: 1 1 auto;            /* allow items to shrink/grow */
+    flex: 0 0 auto;
+    list-style: none;
   }
 
   .nav-links a {
-    font-size: 0.85rem;
-    display: block;            /* makes tap area bigger */
-    padding: 0.25rem 0;        /* extra spacing for touch */
+    display: block;
+    font-size: 0.9rem;
+    padding: 5px 0;
+    white-space: nowrap;
   }
 }
-
